@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprendre le Racisme et l'Antisémitisme en Politique : RN vs LFI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .fade-in { animation: fadeIn 0.4s ease-in-out forwards; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 min-h-screen flex flex-col">
+
+    <main class="max-w-4xl mx-auto px-6 py-12 flex-grow">
+        
+        <header class="mb-12 text-center fade-in">
+            <span class="bg-indigo-100 text-indigo-800 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">Décryptage Politique</span>
+            <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 mt-4 mb-4">LFI, RN, Antisémitisme et Racisme : Fin de la confusion</h1>
+            <p class="text-lg text-slate-600 max-w-2xl mx-auto">Depuis plusieurs années, une inversion médiatique tente de renvoyer dos à dos l'extrême droite et la gauche radicale sur les questions de racisme et d'antisémitisme. Pour comprendre, il faut revenir aux faits, à l'histoire et à la doctrine politique de chaque parti.</p>
+        </header>
+
+        <section class="bg-white rounded-2xl shadow-sm border border-slate-200 p-8 mb-12 fade-in" style="animation-delay: 0.1s;">
+            <h2 class="text-2xl font-bold mb-6 border-b pb-2">Les 3 points fondamentaux pour comprendre</h2>
+            
+            <div class="space-y-6">
+                <div>
+                    <h3 class="font-bold text-lg text-slate-800">1. La fondation et l'ADN politique</h3>
+                    <p class="text-slate-600 mt-1">Le <strong>Front National (devenu RN)</strong> a été fondé en 1972 par des nostalgiques de l'Algérie française, des néofascistes et d'anciens collaborateurs (comme Pierre Bousquet, ancien Waffen-SS). Son idéologie repose sur la préférence nationale, soit l'inégalité des droits selon l'origine. <strong>La France Insoumise</strong> s'inscrit dans la tradition de la gauche républicaine, antiraciste et universaliste, prônant l'égalité stricte de tous les citoyens et la « créolisation ».</p>
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg text-slate-800">2. Les condamnations judiciaires</h3>
+                    <p class="text-slate-600 mt-1">Les dirigeants historiques du FN/RN ont été condamnés à de multiples reprises par la justice pour provocation à la haine raciale, antisémitisme et négationnisme (le fameux "point de détail"). Du côté de LFI, la doctrine politique est farouchement antiraciste. Les controverses reposent souvent sur des mots mal interprétés ou des campagnes de diabolisation médiatique.</p>
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg text-slate-800">3. La confusion Antisionisme = Antisémitisme</h3>
+                    <p class="text-slate-600 mt-1">La principale attaque contre LFI consiste à qualifier son soutien au peuple palestinien et sa critique de la politique de l'État d'Israël (antisionisme ou critique du colonialisme) comme étant de l'antisémitisme (haine des juifs). Or, le droit international et les Nations Unies font une distinction claire entre la critique d'un État et la haine d'une religion ou d'un peuple.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Zone du Quiz -->
+        <section id="quiz-container" class="bg-slate-900 text-white rounded-2xl shadow-xl p-8 md:p-12 fade-in" style="animation-delay: 0.2s;">
+            
+            <div id="quiz-header" class="flex justify-between items-center mb-8">
+                <span class="text-slate-400 font-semibold" id="question-counter">Question 1/12</span>
+                <div class="w-1/2 bg-slate-700 rounded-full h-2">
+                    <div id="progress-bar" class="bg-indigo-500 h-2 rounded-full transition-all duration-300" style="width: 8.33%;"></div>
+                </div>
+            </div>
+
+            <div id="question-block" class="mb-10 min-h-[120px]">
+                <h2 id="question-text" class="text-2xl md:text-3xl font-bold leading-tight">Chargement...</h2>
+            </div>
+
+            <div id="options-block" class="space-y-4">
+                <!-- Les boutons de réponses seront injectés ici par le JS -->
+            </div>
+            
+        </section>
+
+    </main>
+
+    <script>
+        const questions = [
+            {
+                text: "Parmi ces deux partis, lequel a été fondé par d'anciens Waffen-SS et des collaborateurs du régime de Vichy ?",
+                options: [
+                    { text: "Le Rassemblement National (ex-Front National)", score: 1 },
+                    { text: "La France Insoumise", score: 0 },
+                    { text: "Les deux", score: 0 }
+                ],
+                explanation: "Le Front National a été fondé en 1972 par Jean-Marie Le Pen avec des personnalités comme Pierre Bousquet (ancien SS) ou François Brigneau (ancien milicien pétainiste)."
+            },
+            {
+                text: "Laquelle de ces idéologies est structurellement raciste en instaurant une hiérarchie des droits selon l'origine ?",
+                options: [
+                    { text: "La créolisation (LFI)", score: 0 },
+                    { text: "La préférence nationale / priorité nationale (RN)", score: 1 },
+                    { text: "L'universalisme républicain", score: 0 }
+                ],
+                explanation: "La 'préférence nationale' portée par le RN vise à priver les étrangers légaux de droits sociaux et d'accès à certains emplois, ce qui est anticonstitutionnel car discriminant."
+            },
+            {
+                text: "Combien de fois Jean-Luc Mélenchon a-t-il été condamné pour antisémitisme ou provocation à la haine raciale par la justice française ?",
+                options: [
+                    { text: "Plus de 10 fois", score: 0 },
+                    { text: "3 fois", score: 0 },
+                    { text: "Zéro fois", score: 1 }
+                ],
+                explanation: "Malgré les accusations médiatiques, Jean-Luc Mélenchon n'a jamais été condamné pour antisémitisme. À l'inverse, Jean-Marie Le Pen a été condamné plus d'une dizaine de fois."
+            },
+            {
+                text: "Qu'est-ce que l'antisionisme, souvent utilisé pour accuser LFI d'antisémitisme ?",
+                options: [
+                    { text: "La haine du peuple juif et de la religion juive", score: 0 },
+                    { text: "La critique du projet politique de l'État d'Israël et de sa politique coloniale", score: 1 },
+                    { text: "Une théorie du complot", score: 0 }
+                ],
+                explanation: "L'antisionisme est une position politique et géopolitique concernant l'État d'Israël (et est partagée par de nombreux juifs à travers le monde). L'antisémitisme, en revanche, est un délit raciste puni par la loi."
+            },
+            {
+                text: "Lequel de ces partis vote systématiquement contre les résolutions européennes visant à sauver les migrants en mer Méditerranée ?",
+                options: [
+                    { text: "Le Rassemblement National", score: 1 },
+                    { text: "La France Insoumise", score: 0 },
+                    { text: "Les deux s'abstiennent", score: 0 }
+                ],
+                explanation: "Le RN s'oppose systématiquement aux politiques d'accueil et de sauvetage au Parlement européen, tandis que LFI défend l'accueil digne et le respect du droit maritime international."
+            },
+            {
+                text: "Qui a qualifié les chambres à gaz de la Seconde Guerre mondiale de « point de détail de l'histoire » ?",
+                options: [
+                    { text: "Un dirigeant de LFI", score: 0 },
+                    { text: "Jean-Marie Le Pen (Fondateur du RN)", score: 1 },
+                    { text: "Un militant de gauche radicale", score: 0 }
+                ],
+                explanation: "Jean-Marie Le Pen a été condamné pour cette phrase prononcée à plusieurs reprises, qui banalise la Shoah et relève du négationnisme."
+            },
+            {
+                text: "Lors des votes à l'Assemblée Nationale concernant le mariage pour tous (droits LGBTQI+), quelle a été la position historique de l'extrême droite ?",
+                options: [
+                    { text: "Ils ont voté massivement Pour", score: 0 },
+                    { text: "Ils ont voté massivement Contre et défilé avec la Manif pour Tous", score: 1 },
+                    { text: "Ils se sont abstenus", score: 0 }
+                ],
+                explanation: "Le RN et ses dirigeants se sont opposés violemment au mariage homosexuel, montrant que les discriminations de l'extrême droite ne s'arrêtent pas seulement à l'origine, mais aussi à l'orientation sexuelle."
+            },
+            {
+                text: "Quel terme LFI utilise-t-elle pour décrire la société française comme un mélange culturel positif et dynamique ?",
+                options: [
+                    { text: "Le grand remplacement", score: 0 },
+                    { text: "L'assimilation forcée", score: 0 },
+                    { text: "La créolisation", score: 1 }
+                ],
+                explanation: "Inspiré par le poète Édouard Glissant, LFI prône la 'créolisation', qui célèbre la rencontre des cultures pour former une société nouvelle et unie, aux antipodes du racisme."
+            },
+            {
+                text: "Aujourd'hui, pour redorer son blason, le RN prétend défendre les Français de confession juive. Pourquoi cette posture est-elle jugée hypocrite par les historiens ?",
+                options: [
+                    { text: "Car le RN cible désormais les musulmans avec la même rhétorique qu'il utilisait contre les juifs dans les années 30", score: 1 },
+                    { text: "Car c'est vrai, ils ont changé", score: 0 },
+                    { text: "Car ils n'ont pas de programme économique", score: 0 }
+                ],
+                explanation: "Le RN utilise la figure de l'étranger (hier le juif, aujourd'hui le musulman ou le migrant) comme bouc émissaire pour expliquer tous les maux de la société (chômage, insécurité)."
+            },
+            {
+                text: "Quelle est la stratégie médiatique utilisée pour faire croire que LFI est d'extrême droite ?",
+                options: [
+                    { text: "La théorie du 'Fer à cheval' et la diabolisation médiatique orchestrée par certains milliardaires", score: 1 },
+                    { text: "L'analyse objective de leurs votes", score: 0 },
+                    { text: "La lecture de leur programme", score: 0 }
+                ],
+                explanation: "Les chaînes détenues par des milliardaires (comme CNews de Bolloré) utilisent la théorie du fer à cheval pour dédiaboliser l'extrême droite tout en diabolisant la gauche de rupture, afin de protéger leurs intérêts économiques."
+            },
+            {
+                text: "Lequel de ces partis propose dans son programme la régularisation des travailleurs sans-papiers qui font tourner l'économie française ?",
+                options: [
+                    { text: "Le Rassemblement National", score: 0 },
+                    { text: "La France Insoumise", score: 1 },
+                    { text: "Aucun des deux", score: 0 }
+                ],
+                explanation: "LFI propose de régulariser ces travailleurs pour leur donner des droits et empêcher le dumping social patronal. Le RN propose l'expulsion et la fin de l'Aide Médicale d'État (AME)."
+            },
+            {
+                text: "Conclusion : Si l'on s'en tient aux faits et à l'ADN des partis, qui est structurellement raciste ?",
+                options: [
+                    { text: "La France Insoumise", score: 0 },
+                    { text: "Les deux", score: 0 },
+                    { text: "Le Rassemblement National", score: 1 }
+                ],
+                explanation: "Le RN fonde son programme sur l'exclusion, la stigmatisation et la préférence nationale. LFI fonde son projet sur l'égalité, l'antiracisme et la redistribution sociale."
+            }
+        ];
+
+        let currentQuestion = 0;
+        let scoreCorrect = 0;
+
+        const questionText = document.getElementById("question-text");
+        const optionsBlock = document.getElementById("options-block");
+        const questionCounter = document.getElementById("question-counter");
+        const progressBar = document.getElementById("progress-bar");
+        const quizContainer = document.getElementById("quiz-container");
+
+        function loadQuestion() {
+            const q = questions[currentQuestion];
+            questionText.innerText = q.text;
+            questionCounter.innerText = `Question ${currentQuestion + 1}/${questions.length}`;
+            progressBar.style.width = `${((currentQuestion) / questions.length) * 100}%`;
+            
+            optionsBlock.innerHTML = "";
+            
+            q.options.forEach((opt) => {
+                const btn = document.createElement("button");
+                btn.className = "w-full text-left bg-slate-800 hover:bg-indigo-600 transition-colors duration-200 text-white font-medium py-4 px-6 rounded-xl border border-slate-700 hover:border-indigo-500 focus:outline-none";
+                btn.innerText = opt.text;
+                btn.onclick = () => handleAnswer(opt, btn);
+                optionsBlock.appendChild(btn);
+            });
+        }
+
+        function handleAnswer(selectedOption, buttonElement) {
+            // Désactiver tous les boutons pour empêcher le double clic
+            const allButtons = optionsBlock.querySelectorAll('button');
+            allButtons.forEach(btn => btn.disabled = true);
+
+            // Vérifier si la réponse est la "bonne" selon la logique de déconstruction des fake news
+            if (selectedOption.score === 1) {
+                buttonElement.classList.remove('bg-slate-800', 'hover:bg-indigo-600');
+                buttonElement.classList.add('bg-emerald-600', 'border-emerald-500');
+                scoreCorrect++;
+            } else {
+                buttonElement.classList.remove('bg-slate-800', 'hover:bg-indigo-600');
+                buttonElement.classList.add('bg-red-600', 'border-red-500');
+                
+                // Mettre en surbrillance la bonne réponse
+                questions[currentQuestion].options.forEach((opt, index) => {
+                    if(opt.score === 1) {
+                        allButtons[index].classList.remove('bg-slate-800');
+                        allButtons[index].classList.add('border-emerald-500', 'text-emerald-400');
+                    }
+                });
+            }
+
+            // Afficher l'explication factuelle
+            const explanationBox = document.createElement("div");
+            explanationBox.className = "mt-6 p-5 bg-slate-800 rounded-xl border border-slate-600 text-slate-300 fade-in";
+            explanationBox.innerHTML = `<span class="font-bold text-white block mb-1">Le Fait :</span> ${questions[currentQuestion].explanation}`;
+            optionsBlock.appendChild(explanationBox);
+
+            // Bouton pour continuer
+            const nextBtn = document.createElement("button");
+            nextBtn.className = "mt-6 w-full bg-white text-slate-900 hover:bg-slate-200 font-bold py-3 px-6 rounded-xl transition-colors fade-in";
+            nextBtn.innerText = currentQuestion < questions.length - 1 ? "Question Suivante →" : "Voir la conclusion";
+            nextBtn.onclick = () => {
+                currentQuestion++;
+                if (currentQuestion < questions.length) {
+                    loadQuestion();
+                } else {
+                    showResult();
+                }
+            };
+            optionsBlock.appendChild(nextBtn);
+        }
+
+        function showResult() {
+            progressBar.style.width = "100%";
+            quizContainer.classList.remove('bg-slate-900');
+            quizContainer.classList.add('bg-indigo-900');
+            
+            let resultHtml = `
+                <div class="text-center fade-in">
+                    <span class="inline-block p-3 bg-indigo-800 rounded-full mb-4">
+                        <svg class="w-10 h-10 text-indigo-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                    </span>
+                    <h2 class="text-3xl md:text-4xl font-extrabold mb-4 text-white">Vous avez décrypté la désinformation</h2>
+                    <div class="bg-indigo-800/50 p-6 rounded-xl text-left space-y-4 text-indigo-100 mt-6 border border-indigo-700/50">
+                        <p><strong>Bilan :</strong> L'accusation d'antisémitisme envers la France Insoumise repose principalement sur une volonté médiatique de confondre volontairement <em>l'antisionisme</em> (critique de l'État d'Israël) et <em>l'antisémitisme</em> (le racisme envers les juifs).</p>
+                        <p>À l'inverse, l'extrême droite (RN), malgré ses récentes tentatives de dédiabolisation, est fondée par des collaborateurs antisémites et conserve en son cœur la "préférence nationale", une idéologie qui hiérarchise les êtres humains selon leur origine.</p>
+                        <p class="pt-4 border-t border-indigo-700 font-semibold text-white">Le combat antiraciste se mène par l'égalité sociale et l'universalisme, des valeurs qui sont fondamentalement absentes de l'extrême droite.</p>
+                    </div>
+                    <button onclick="location.reload()" class="mt-8 bg-white text-indigo-900 hover:bg-slate-100 font-bold py-3 px-8 rounded-xl transition-colors">
+                        Recommencer le test
+                    </button>
+                    <a href="index.html" class="mt-4 block text-indigo-300 hover:text-white transition-colors">
+                        ← Retour aux projets
+                    </a>
+                </div>
+            `;
+            quizContainer.innerHTML = resultHtml;
+        }
+
+        // Démarrer le quiz
+        loadQuestion();
+    </script>
+</body>
+</html>
