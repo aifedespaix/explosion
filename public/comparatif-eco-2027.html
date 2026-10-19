@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparatif Économique 2027 & Simulateur de Vote</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .fade-in { animation: fadeIn 0.5s ease-in-out forwards; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        /* Couleurs politiques personnalisées */
+        .border-poutou { border-color: #7f1d1d; } /* Dark Red */
+        .border-melenchon { border-color: #dc2626; } /* Red */
+        .border-glucksmann { border-color: #db2777; } /* Pink/Rose */
+        .border-attal { border-color: #4f46e5; } /* Indigo/Macronism */
+        .border-philippe { border-color: #0284c7; } /* Light Blue / Right */
+        .border-lepen { border-color: #1e3a8a; } /* Navy Blue / RN */
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen">
+
+    <div class="max-w-6xl mx-auto px-4 py-12">
+        <header class="text-center mb-16 fade-in">
+            <h1 class="text-4xl md:text-5xl font-black text-slate-900 mb-4">La Bataille des Milliards</h1>
+            <p class="text-xl text-slate-600 max-w-3xl mx-auto">Analyse objective des programmes économiques des principaux blocs politiques. Comment comptent-ils gérer la dette, quels impôts veulent-ils lever, et qu'en disent les économistes ?</p>
+        </header>
+
+        <!-- Grille des candidats -->
+        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+            
+            <!-- Philippe Poutou -->
+            <article class="bg-white rounded-2xl shadow-sm p-6 border-t-8 border-poutou fade-in" style="animation-delay: 0.1s;">
+                <h2 class="text-2xl font-bold text-slate-900 mb-1">Philippe Poutou <span class="text-sm font-normal text-slate-500">(NPA / Extrême Gauche)</span></h2>
+                <div class="mt-4 space-y-3 text-sm">
+                    <p><strong>Vision Dette :</strong> Illégitime. Annulation unilatérale de la dette publique et sortie du système capitaliste.</p>
+                    <p><strong>Recettes visées :</strong> Plusieurs centaines de milliards via l'expropriation des banques, des grands groupes industriels et la saisie des fortunes.</p>
+                    <p><strong>Méthode :</strong> IS à 100% au-delà d'un certain plafond, interdiction stricte des licenciements, smic à 2000€ nets.</p>
+                    <div class="mt-4 pt-4 border-t border-slate-100">
+                        <p class="font-bold text-red-700">Faisabilité (Économistes) : 1/10</p>
+                        <p class="text-xs text-slate-600 mt-1">Rupture totale avec l'économie de marché. Entraînerait une faillite bancaire immédiate, une sortie de l'UE et un isolement financier du pays. Assumé comme un projet révolutionnaire et non réformiste.</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Jean-Luc Mélenchon -->
+            <article class="bg-white rounded-2xl shadow-sm p-6 border-t-8 border-melenchon fade-in" style="animation-delay: 0.2s;">
+                <h2 class="text-2xl font-bold text-slate-900 mb-1">Jean-Luc Mélenchon <span class="text-sm font-normal text-slate-500">(LFI / Gauche de Rupture)</span></h2>
+                <div class="mt-4 space-y-3 text-sm">
+                    <p><strong>Vision Dette :</strong> Outil d'investissement. La dette n'est pas un problème si elle finance la bifurcation écologique. Refus de l'austérité européenne.</p>
+                    <p><strong>Recettes visées :</strong> ~100 à 150 milliards d'euros par an.</p>
+                    <p><strong>Méthode :</strong> Taxe Zucman (2%), héritage plafonné à 12M€, IR à 14 tranches (90% au sommet), retour de la retraite à 60 ans pour relancer l'emploi.</p>
+                    <div class="mt-4 pt-4 border-t border-slate-100">
+                        <p class="font-bold text-orange-600">Faisabilité (Économistes) : 4/10</p>
+                        <p class="text-xs text-slate-600 mt-1">Soutenu par les économistes keynésiens (relance par la demande). Jugé très risqué par le consensus libéral et la BCE : fort risque de fuite massive des capitaux et d'explosion des taux d'emprunt.</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Raphaël Glucksmann -->
+            <article class="bg-white rounded-2xl shadow-sm p-6 border-t-8 border-glucksmann fade-in" style="animation-delay: 0.3s;">
+                <h2 class="text-2xl font-bold text-slate-900 mb-1">Raphaël Glucksmann <span class="text-sm font-normal text-slate-500">(PP / Social-Démocratie)</span></h2>
+                <div class="mt-4 space-y-3 text-sm">
+                    <p><strong>Vision Dette :</strong> Sérieux budgétaire européen combiné à des emprunts communs à l'échelle de l'UE pour l'industrie, l'écologie et la défense.</p>
+                    <p><strong>Recettes visées :</strong> ~40 à 50 milliards d'euros par an.</p>
+                    <p><strong>Méthode :</strong> ISF climatique, taxe européenne sur les superprofits et les transactions financières, impôts sur les rachats d'actions.</p>
+                    <div class="mt-4 pt-4 border-t border-slate-100">
+                        <p class="font-bold text-yellow-600">Faisabilité (Économistes) : 6.5/10</p>
+                        <p class="text-xs text-slate-600 mt-1">Projet réformiste compatible avec le cadre européen. Les économistes notent une bonne soutenabilité, mais la droite pointe le risque de perte de compétitivité face aux USA/Chine à cause de la hausse des impôts.</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Gabriel Attal -->
+            <article class="bg-white rounded-2xl shadow-sm p-6 border-t-8 border-attal fade-in" style="animation-delay: 0.4s;">
+                <h2 class="text-2xl font-bold text-slate-900 mb-1">Gabriel Attal <span class="text-sm font-normal text-slate-500">(Ren. / Centre Libéral)</span></h2>
+                <div class="mt-4 space-y-3 text-sm">
+                    <p><strong>Vision Dette :</strong> Désendettement prioritaire. Objectif de retour sous les 3% de déficit via la maîtrise de la dépense et la croissance.</p>
+                    <p><strong>Recettes visées :</strong> Maintien de la pression fiscale actuelle. L'argent doit venir des économies (~20 à 30 Mds).</p>
+                    <p><strong>Méthode :</strong> Durcissement de l'assurance chômage pour forcer le plein emploi, rationalisation de l'État, maintien de la retraite à 64 ans.</p>
+                    <div class="mt-4 pt-4 border-t border-slate-100">
+                        <p class="font-bold text-lime-600">Faisabilité (Économistes) : 7.5/10 (Financière) | 3/10 (Sociale)</p>
+                        <p class="text-xs text-slate-600 mt-1">Très rassurant pour les marchés financiers et l'UE. Cependant, de nombreux observateurs jugent que les coupes budgétaires requises sont politiquement et socialement explosives à court terme.</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Édouard Philippe -->
+            <article class="bg-white rounded-2xl shadow-sm p-6 border-t-8 border-philippe fade-in" style="animation-delay: 0.5s;">
+                <h2 class="text-2xl font-bold text-slate-900 mb-1">Édouard Philippe <span class="text-sm font-normal text-slate-500">(Horizons / Droite)</span></h2>
+                <div class="mt-4 space-y-3 text-sm">
+                    <p><strong>Vision Dette :</strong> Alerte rouge totale. La dette menace la souveraineté. Nécessité d'une thérapie de choc sur les dépenses publiques.</p>
+                    <p><strong>Recettes visées :</strong> Baisse des impôts de production pour les entreprises. L'effort est porté sur la réduction colossale des dépenses.</p>
+                    <p><strong>Méthode :</strong> Retraite potentiellement repoussée à 65 voire 67 ans. Suppression massive de postes administratifs, privatisation de certains secteurs.</p>
+                    <div class="mt-4 pt-4 border-t border-slate-100">
+                        <p class="font-bold text-green-600">Faisabilité (Économistes) : 8/10 (Financière)</p>
+                        <p class="text-xs text-slate-600 mt-1">Le programme favori des agences de notation et du patronat pour assainir les comptes. Le risque majeur souligné est la récession provoquée par l'austérité et le blocage syndical total du pays.</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Marine Le Pen -->
+            <article class="bg-white rounded-2xl shadow-sm p-6 border-t-8 border-lepen fade-in" style="animation-delay: 0.6s;">
+                <h2 class="text-2xl font-bold text-slate-900 mb-1">Marine Le Pen <span class="text-sm font-normal text-slate-500">(RN / Droite Nationaliste)</span></h2>
+                <div class="mt-4 space-y-3 text-sm">
+                    <p><strong>Vision Dette :</strong> Dette préoccupante mais le pouvoir d'achat des "nationaux" prime. Volonté de s'affranchir de certaines règles du marché européen.</p>
+                    <p><strong>Recettes visées :</strong> ~15 à 20 milliards financés par la fin des aides sociales aux étrangers. Baisse de la TVA sur l'énergie (coût 12 Mds).</p>
+                    <p><strong>Méthode :</strong> Préférence nationale ("priorité nationale"), retraite selon annuités (entre 60 et 62 ans pour carrières longues), protectionnisme économique.</p>
+                    <div class="mt-4 pt-4 border-t border-slate-100">
+                        <p class="font-bold text-red-500">Faisabilité (Économistes) : 3/10</p>
+                        <p class="text-xs text-slate-600 mt-1">Le chiffrage des "économies sur l'immigration" est jugé fantaisiste par la quasi-totalité des instituts indépendants. Risque de sanction lourde de l'UE et inquiétude des investisseurs face au protectionnisme.</p>
+                    </div>
+                </div>
+            </article>
+
+        </section>
+
+        <!-- QUIZ INTERACTIF -->
+        <section class="bg-slate-900 text-white rounded-3xl shadow-xl p-8 md:p-12 mb-12">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-black mb-2">Quel programme correspond à vos choix ?</h2>
+                <p class="text-slate-400">12 questions budgétaires et fiscales pour définir votre Top 3 politique.</p>
+            </div>
+
+            <div id="quiz-header" class="flex justify-between items-center mb-8">
+                <span class="text-slate-400 font-semibold" id="question-counter">Question 1/12</span>
+                <div class="w-1/2 bg-slate-700 rounded-full h-2">
+                    <div id="progress-bar" class="bg-emerald-500 h-2 rounded-full transition-all duration-300" style="width: 8.33%;"></div>
+                </div>
+            </div>
+
+            <div id="question-block" class="mb-10 min-h-[100px]">
+                <h3 id="question-text" class="text-2xl font-bold leading-tight">Chargement...</h3>
+            </div>
+
+            <div id="options-block" class="space-y-3">
+                <!-- Boutons injectés ici -->
+            </div>
+
+            <div id="result-block" class="hidden text-center fade-in">
+                <!-- Résultats injectés ici -->
+            </div>
+        </section>
+
+    </div>
+
+    <script>
+        const questions = [
+            {
+                text: "Sur la question de la dette publique de la France, vous pensez qu'il faut :",
+                options: [
+                    { text: "L'annuler purement et simplement, elle est illégitime.", candidates: ['poutou'] },
+                    { text: "Ne pas s'en soucier si elle finance l'écologie et les services publics.", candidates: ['melenchon'] },
+                    { text: "La rembourser progressivement sans tuer le modèle social, via une taxation ciblée.", candidates: ['glucksmann'] },
+                    { text: "La réduire absolument en baissant les dépenses de l'État.", candidates: ['attal', 'philippe'] }
+                ]
+            },
+            {
+                text: "Face à la fortune des multi-milliardaires, quelle est votre position ?",
+                options: [
+                    { text: "Les exproprier. Personne ne devrait posséder de grands groupes.", candidates: ['poutou'] },
+                    { text: "Instaurer une taxe de 2% sur leur patrimoine global et un impôt sur l'héritage à 100% au-delà de 12M€.", candidates: ['melenchon'] },
+                    { text: "Mettre en place un ISF climatique ciblé pour financer la transition verte.", candidates: ['glucksmann'] },
+                    { text: "Ne pas augmenter leurs impôts pour qu'ils continuent d'investir et de créer des emplois en France.", candidates: ['attal', 'philippe'] }
+                ]
+            },
+            {
+                text: "À quel âge devrait-on partir à la retraite dans l'idéal économique ?",
+                options: [
+                    { text: "60 ans pour tout le monde, pour partager le temps de travail.", candidates: ['poutou', 'melenchon'] },
+                    { text: "Entre 60 et 62 ans pour ceux qui ont commencé tôt, financé par des économies sur l'immigration.", candidates: ['lepen'] },
+                    { text: "Le système actuel (autour de 62-64 ans) est un équilibre acceptable.", candidates: ['glucksmann'] },
+                    { text: "65 voire 67 ans. C'est mathématique, on vit plus vieux, il faut travailler plus longtemps.", candidates: ['attal', 'philippe'] }
+                ]
+            },
+            {
+                text: "Comment régler le problème du chômage et du pouvoir d'achat ?",
+                options: [
+                    { text: "En interdisant les licenciements et en passant le SMIC à 2000€ nets.", candidates: ['poutou'] },
+                    { text: "En augmentant fortement le SMIC et le point d'indice des fonctionnaires pour relancer la consommation.", candidates: ['melenchon'] },
+                    { text: "En baissant la TVA sur l'énergie et l'essence pour rendre de l'argent aux Français directement.", candidates: ['lepen'] },
+                    { text: "En durcissant les règles du chômage pour forcer la reprise d'emploi et baisser les charges des entreprises.", candidates: ['attal', 'philippe'] }
+                ]
+            },
+            {
+                text: "Si les traités européens (BCE, règles budgétaires) empêchent vos réformes sociales :",
+                options: [
+                    { text: "On sort de l'Union Européenne et du système capitaliste.", candidates: ['poutou'] },
+                    { text: "On désobéit unilatéralement aux traités qui bloquent (Opt-out).", candidates: ['melenchon', 'lepen'] },
+                    { text: "On reste dans le cadre mais on négocie de nouveaux emprunts communs européens.", candidates: ['glucksmann'] },
+                    { text: "On respecte strictement les traités, la crédibilité financière de la France en dépend.", candidates: ['attal', 'philippe'] }
+                ]
+            },
+            {
+                text: "Quelle doit être la priorité absolue du prochain budget de l'État ?",
+                options: [
+                    { text: "La lutte contre les inégalités et l'éradication de la pauvreté.", candidates: ['poutou', 'melenchon'] },
+                    { text: "La réindustrialisation verte et la défense européenne.", candidates: ['glucksmann'] },
+                    { text: "Le redressement des comptes publics (ramener le déficit sous les 3%).", candidates: ['attal', 'philippe'] },
+                    { text: "La préférence nationale pour réserver les aides sociales aux citoyens français.", candidates: ['lepen'] }
+                ]
+            },
+            {
+                text: "Faut-il réduire le nombre de fonctionnaires ?",
+                options: [
+                    { text: "Absolument pas, il faut embaucher massivement dans la santé et l'éducation.", candidates: ['poutou', 'melenchon', 'glucksmann'] },
+                    { text: "Il faut les réaffecter (plus de policiers, moins d'administratifs).", candidates: ['lepen'] },
+                    { text: "Oui, il faut rationaliser l'État pour faire des économies majeures.", candidates: ['attal', 'philippe'] }
+                ]
+            },
+            {
+                text: "Quelle politique fiscale pour les entreprises (PME et Grands Groupes) ?",
+                options: [
+                    { text: "Saisie des bénéfices des grands groupes.", candidates: ['poutou'] },
+                    { text: "Taxer lourdement les superprofits et augmenter l'impôt sur les sociétés.", candidates: ['melenchon'] },
+                    { text: "Baisser massivement leurs impôts de production pour qu'elles soient compétitives face à l'étranger.", candidates: ['attal', 'philippe'] },
+                    { text: "Mettre en place un protectionnisme douanier pour les protéger de la concurrence déloyale.", candidates: ['lepen'] }
+                ]
+            },
+            {
+                text: "Concernant l'immigration, d'un point de vue purement économique :",
+                options: [
+                    { text: "C'est une richesse, il faut régulariser les travailleurs sans-papiers qui font tourner l'économie.", candidates: ['poutou', 'melenchon'] },
+                    { text: "Il faut une immigration de travail régulée selon les besoins européens.", candidates: ['glucksmann', 'attal'] },
+                    { text: "C'est un coût insupportable pour nos finances. Il faut supprimer l'Aide Médicale d'État (AME).", candidates: ['lepen', 'philippe'] }
+                ]
+            },
+            {
+                text: "Sur l'énergie et l'écologie (nucléaire vs renouvelables) :",
+                options: [
+                    { text: "Sortir du nucléaire à terme et investir 100% dans le renouvelable public.", candidates: ['poutou', 'melenchon'] },
+                    { text: "Maintenir le nucléaire tout en investissant massivement dans la rénovation thermique et le renouvelable.", candidates: ['glucksmann'] },
+                    { text: "Relancer un programme nucléaire fort (EPR) pour garantir l'indépendance énergétique et industrielle.", candidates: ['attal', 'philippe', 'lepen'] }
+                ]
+            },
+            {
+                text: "Si les agences de notation dégradent la note financière de la France :",
+                options: [
+                    { text: "On s'en fiche, la finance ne doit pas dicter la politique.", candidates: ['poutou', 'melenchon'] },
+                    { text: "C'est un complot, mais on rassurera les marchés en baissant nos subventions à l'UE.", candidates: ['lepen'] },
+                    { text: "C'est un signal qu'il faut investir plus intelligemment sans paniquer.", candidates: ['glucksmann'] },
+                    { text: "C'est dramatique. Il faut immédiatement voter un plan de rigueur sévère.", candidates: ['attal', 'philippe'] }
+                ]
+            },
+            {
+                text: "En une phrase, votre philosophie économique c'est :",
+                options: [
+                    { text: "La lutte des classes : abattre le capitalisme.", candidates: ['poutou'] },
+                    { text: "La redistribution radicale : prendre aux riches pour investir dans le social.", candidates: ['melenchon'] },
+                    { text: "La justice régulée : une économie de marché encadrée par la social-démocratie et l'écologie.", candidates: ['glucksmann'] },
+                    { text: "Le libéralisme pragmatique : laisser faire les entreprises pour créer des emplois et réduire l'État.", candidates: ['attal', 'philippe'] },
+                    { text: "Le patriotisme économique : protéger le marché français et réserver l'argent aux nationaux.", candidates: ['lepen'] }
+                ]
+            }
+        ];
+
+        let currentQuestion = 0;
+        const scores = {
+            poutou: 0,
+            melenchon: 0,
+            glucksmann: 0,
+            attal: 0,
+            philippe: 0,
+            lepen: 0
+        };
+
+        const candidateNames = {
+            poutou: { name: "Philippe Poutou (NPA)", color: "text-red-700" },
+            melenchon: { name: "Jean-Luc Mélenchon (LFI)", color: "text-red-600" },
+            glucksmann: { name: "Raphaël Glucksmann (PP)", color: "text-pink-600" },
+            attal: { name: "Gabriel Attal (Renaissance)", color: "text-indigo-500" },
+            philippe: { name: "Édouard Philippe (Horizons)", color: "text-blue-600" },
+            lepen: { name: "Marine Le Pen (RN)", color: "text-blue-900" }
+        };
+
+        const questionText = document.getElementById("question-text");
+        const optionsBlock = document.getElementById("options-block");
+        const questionCounter = document.getElementById("question-counter");
+        const progressBar = document.getElementById("progress-bar");
+
+        function loadQuestion() {
+            const q = questions[currentQuestion];
+            questionText.innerText = q.text;
+            questionCounter.innerText = `Question ${currentQuestion + 1}/${questions.length}`;
+            progressBar.style.width = `${((currentQuestion) / questions.length) * 100}%`;
+            
+            optionsBlock.innerHTML = "";
+            
+            q.options.forEach((opt) => {
+                const btn = document.createElement("button");
+                btn.className = "w-full text-left bg-slate-800 hover:bg-slate-700 transition-colors duration-200 text-white font-medium py-4 px-6 rounded-xl border border-slate-700 hover:border-emerald-500 focus:outline-none";
+                btn.innerText = opt.text;
+                btn.onclick = () => handleAnswer(opt.candidates);
+                optionsBlock.appendChild(btn);
+            });
+        }
+
+        function handleAnswer(selectedCandidates) {
+            // Ajouter des points
+            selectedCandidates.forEach(candidate => {
+                scores[candidate] += 1;
+            });
+
+            currentQuestion++;
+            
+            if (currentQuestion < questions.length) {
+                loadQuestion();
+            } else {
+                showResult();
+            }
+        }
+
+        function showResult() {
+            document.getElementById("quiz-header").style.display = "none";
+            document.getElementById("question-block").style.display = "none";
+            document.getElementById("options-block").style.display = "none";
+            
+            const resultBlock = document.getElementById("result-block");
+            resultBlock.style.display = "block";
+
+            // Trier les scores
+            const sortedScores = Object.entries(scores)
+                .sort((a, b) => b[1] - a[1])
+                .slice(0, 3); // Prendre le top 3
+
+            let top3Html = `<h2 class="text-4xl font-extrabold mb-8">Votre Top 3 Économique</h2>
+                            <div class="space-y-4 max-w-md mx-auto text-left mb-8">`;
+
+            sortedScores.forEach((item, index) => {
+                const candData = candidateNames[item[0]];
+                const percentage = Math.round((item[1] / questions.length) * 100);
+                
+                let medal = index === 0 ? '🥇' : index === 1 ? '🥈' : '🥉';
+                
+                top3Html += `
+                    <div class="bg-slate-800 p-4 rounded-xl flex items-center justify-between border border-slate-700">
+                        <div class="flex items-center space-x-3">
+                            <span class="text-2xl">${medal}</span>
+                            <span class="font-bold text-lg ${candData.color}">${candData.name}</span>
+                        </div>
+                        <span class="font-mono bg-slate-900 px-3 py-1 rounded-lg text-emerald-400 font-bold">${percentage}% d'affinité</span>
+                    </div>
+                `;
+            });
+
+            top3Html += `</div>
+                <p class="text-slate-400 text-sm mb-8">Ce résultat est basé exclusivement sur l'idéologie budgétaire, fiscale et sociale renseignée lors du test.</p>
+                <button onclick="location.reload()" class="bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 px-8 rounded-xl transition-colors">
+                    Refaire le simulateur
+                </button>
+                <a href="index.html" class="block mt-6 text-slate-400 hover:text-white transition-colors">← Retour au portail web</a>
+            `;
+
+            resultBlock.innerHTML = top3Html;
+        }
+
+        // Démarrer
+        loadQuestion();
+    </script>
+</body>
+</html>
