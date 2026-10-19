@@ -162,10 +162,6 @@
         // A : Gauche / Redistribution stricte
         // B : Réformiste / Pragmatique / Social-démocrate
         // C : Libéral / Pro-entreprise / Offre
-
-        Array.prototype.sample = function() {
-          return this[Math.floor(Math.random()*this.length)];
-        }
         const questions = [
             // Thème 1 : Création de valeur
             {
@@ -174,7 +170,7 @@
                     { text: "De l'exploitation du travail collectif, des salariés et des infrastructures publiques.", profile: "A" },
                     { text: "D'un mélange complexe entre vision personnelle, conjoncture et écosystème national.", profile: "B" },
                     { text: "De leur prise de risque, de leur génie entrepreneurial et de l'innovation boursière.", profile: "C" }
-                ].sample()
+                ]
             },
             {
                 text: "Faudrait-il instaurer un plafond de richesse maximale au-delà duquel tout est taxé à 100% ?",
@@ -182,7 +178,7 @@
                     { text: "Oui, personne ne devrait posséder des milliards alors que la pauvreté existe.", profile: "A" },
                     { text: "Non, mais la progressivité de l'impôt doit être beaucoup plus forte au sommet.", profile: "B" },
                     { text: "Non, plafonner la réussite détruirait toute incitation à entreprendre et innover.", profile: "C" }
-                ].sample()
+                ]
             },
             {
                 text: "Que pensez-vous des dividendes massifs versés aux grands actionnaires ?",
@@ -190,7 +186,7 @@
                     { text: "C'est de la richesse soustraite aux salaires et à l'investissement réel.", profile: "A" },
                     { text: "Ils sont normaux, mais devraient être conditionnés à des critères sociaux ou environnementaux.", profile: "B" },
                     { text: "C'est la rémunération légitime du risque pris par ceux qui financent l'économie.", profile: "C" }
-                ].sample()
+                ]
             },
             // Thème 2 : Exil fiscal
             {
@@ -199,7 +195,7 @@
                     { text: "Qu'il parte ! D'autres acteurs économiques et PME prendront naturellement sa place.", profile: "A" },
                     { text: "C'est un risque : il faut négocier ce type de taxe a minima au niveau européen.", profile: "B" },
                     { text: "C'est la preuve qu'une telle taxe est confiscatoire et détruira notre attractivité.", profile: "C" }
-                ].sample()
+                ]
             },
             {
                 text: "L'exit tax (taxer lourdement ceux qui s'exilent fiscalement) :",
@@ -207,7 +203,7 @@
                     { text: "Doit être implacable pour empêcher le vol de la richesse créée sur notre sol.", profile: "A" },
                     { text: "Est un outil de dissuasion utile, mais complexe à appliquer juridiquement.", profile: "B" },
                     { text: "S'apparente à fermer les frontières économiques et effraie les investisseurs étrangers.", profile: "C" }
-                ].sample()
+                ]
             },
             {
                 text: "Le capital d'une grande entreprise détenue par un milliardaire qui s'exile :",
@@ -215,7 +211,7 @@
                     { text: "Devrait pouvoir être réquisitionné ou gelé par l'État s'il a profité d'aides publiques.", profile: "A" },
                     { text: "Reste privé, mais la France doit utiliser ses leviers (commandes, régulation) pour faire pression.", profile: "B" },
                     { text: "Est une propriété privée sacrée : l'État n'a pas à confisquer ce qui ne lui appartient pas.", profile: "C" }
-                ].sample()
+                ]
             },
             // Thème 3 : Rôle de l'État et Dette
             {
@@ -224,7 +220,7 @@
                     { text: "Augmenter drastiquement les impôts sur les ultra-riches et les superprofits.", profile: "A" },
                     { text: "Mixer un effort fiscal des plus aisés avec une rationalisation ciblée de l'État.", profile: "B" },
                     { text: "Baisser massivement les dépenses publiques, le coût de l'État et réformer les aides sociales.", profile: "C" }
-                ].sample()
+                ]
             },
             {
                 text: "L'impôt sur les successions (héritages des ultra-riches) :",
@@ -232,7 +228,7 @@
                     { text: "Doit être très lourd pour empêcher la création de dynasties financières figées.", profile: "A" },
                     { text: "Doit préserver la transmission des entreprises familiales, tout en taxant les extrêmes.", profile: "B" },
                     { text: "Est fondamentalement injuste : cet argent a déjà été taxé durant la vie des parents.", profile: "C" }
-                ].sample()
+                ]
             },
             {
                 text: "Le financement des services publics (hôpitaux, écoles) :",
@@ -240,7 +236,7 @@
                     { text: "Souffre d'un manque d'argent qu'on ne peut combler qu'en taxant le grand capital.", profile: "A" },
                     { text: "Manque de moyens, mais souffre aussi d'une lourdeur bureaucratique à réformer.", profile: "B" },
                     { text: "Coûte déjà un niveau record de prélèvements obligatoires, il faut optimiser et réduire la voilure.", profile: "C" }
-                ].sample()
+                ]
             },
             // Thème 4 : Souveraineté et Mondialisation
             {
@@ -249,7 +245,7 @@
                     { text: "Les multinationales dépendent de la France (savoir-faire, infrastructures, sécurité).", profile: "A" },
                     { text: "C'est une interdépendance stratégique où chacun a besoin de l'autre pour rayonner.", profile: "B" },
                     { text: "La France dépend de ses multinationales (emplois, impôts, balance commerciale mondiale).", profile: "C" }
-                ].sample()
+                ]
             },
             {
                 text: "Face à la concurrence mondiale (États-Unis, Asie) :",
@@ -257,7 +253,7 @@
                     { text: "Il faut du protectionnisme écologique et social aux frontières de l'Europe.", profile: "A" },
                     { text: "Il faut des champions européens soutenus par un État stratège.", profile: "B" },
                     { text: "Il faut baisser les impôts de production et assouplir le marché du travail en France.", profile: "C" }
-                ].sample()
+                ]
             },
             {
                 text: "Un fonds d'investissement étranger qui rachète un fleuron industriel français :",
@@ -265,7 +261,7 @@
                     { text: "Est une dépossession nationale. L'État doit s'y opposer systématiquement.", profile: "A" },
                     { text: "Est acceptable s'il apporte des capitaux, sauf pour les secteurs vitaux (santé, énergie, défense).", profile: "B" },
                     { text: "Est un signal très positif de l'attractivité de notre économie sur le marché mondial.", profile: "C" }
-                ].sample()
+                ]
             }
         ];
 
@@ -295,7 +291,7 @@
 
                 // Render options
                 optionsContainer.innerHTML = '';
-                currentQuestion.options.forEach(option => {
+                shuffle(currentQuestion.options).forEach(option => {
                     const button = document.createElement('button');
                     button.className = "w-full text-left p-4 rounded-xl border-2 border-slate-200 hover:border-indigo-500 hover:bg-indigo-50 text-slate-700 font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-indigo-500";
                     button.innerText = option.text;
